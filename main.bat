@@ -1,0 +1,13 @@
+@echo off
+chcp 65001 > NUL
+echo .
+echo ███╗   ███╗ █████╗  ██████╗███████╗ ██████╗ 
+echo ████╗ ████║██╔══██╗██╔════╝██╔════╝██╔════╝ 
+echo ██╔████╔██║███████║██║     █████╗  ██║  ███╗
+echo ██║╚██╔╝██║██╔══██║██║     ██╔══╝  ██║   ██║
+echo ██║ ╚═╝ ██║██║  ██║╚██████╗██║     ╚██████╔╝
+echo ╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝      ╚═════╝ 
+echo desc: configure my env • version: 0.1.0
+powershell.exe -Command "Get-ChildItem -Path ./scripts/*.ps1 | Unblock-File"
+powershell.exe -ExecutionPolicy Bypass -File ./scripts/main.ps1
+pause
