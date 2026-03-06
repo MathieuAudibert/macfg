@@ -1,5 +1,4 @@
 #!/bin/bash
-chcp 65001 > /dev/null
 
 source ./scripts/utils.sh
 source ./scripts/lang.sh
