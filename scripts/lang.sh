@@ -4,7 +4,8 @@ install_git_tools() {
     if ask_install "SSH Keys" "ed25519"; then
         echo "Generating SSH keys"
         mkdir -p "$HOME/.ssh"
-        ssh-keygen -t ed25519 -C "$(whoami)@autoinstall" -f "$HOME/.ssh/id_ed25519" -N ""
+        read -p "email" mail
+        ssh-keygen -t ed25519 -C "$(whoami)@$(mail)" -f "$HOME/.ssh/id_ed25519" -N ""
         echo "Public key (github/gitlab) :"
         cat "$HOME/.ssh/id_ed25519.pub"
     fi

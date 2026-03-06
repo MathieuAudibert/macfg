@@ -1,3 +1,15 @@
+unzip() {
+    local zipfile destdir
+    while [[ $# -gt 0 ]]; do
+        case "$1" in
+            -q) shift ;;
+            -d) destdir="$2"; shift 2 ;;
+            *) zipfile="$1"; shift ;;
+        esac
+    done
+    powershell -Command "Expand-Archive -Path '$zipfile' -DestinationPath '$destdir' -Force"
+}
+
 ask_install(){
     read -p "Do you want to install $1:$2 ? (y/n) : " choice
     case "$choice" in

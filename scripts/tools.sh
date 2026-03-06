@@ -2,7 +2,7 @@
 
 install_vscode() {
     if ask_install "VS Code" "latest"; then
-        echo "VsCdode installation (portable)"
+        echo "VsCode installation (portable)"
         curl -L "$(ini_val links VSCODE ./conf/links.ini)" -o "vscode.zip"
         unzip -q "vscode.zip" -d "./bin/vscode"
         rm "vscode.zip"
