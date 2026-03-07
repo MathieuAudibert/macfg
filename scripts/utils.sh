@@ -10,6 +10,12 @@ unzip() {
     powershell -Command "Expand-Archive -Path '$zipfile' -DestinationPath '$destdir' -Force"
 }
 
+get_vsc_extensions() {
+    local file=$1
+    sed -nr "/^\[vsc-plugins\]/ { :l n; /^\[/ q; /^[^#;].*=/ { s/^[^=]*=[ ]*//; p; }; b l; }" "$file" \
+        | tr ',' '\n' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//' | grep -v '^$'
+}
+
 ask_install(){
     read -p "Do you want to install $1:$2 ? (y/n) : " choice
     case "$choice" in

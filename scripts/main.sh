@@ -19,10 +19,14 @@ echo "[*] Customizing settings.json to match your user..."
 USER_NAME=$(whoami)
 sed -i "s/<NAME>/$USER_NAME/g" ./conf/settings.json
 
-install_git_tools     
-install_languages     
-install_vscode        
-install_bruno         
+install_git_tools
+install_languages
+install_vscode
+install_bruno
+install_docker
+install_cli_tools
+install_databases
+install_db_managers
 
 if ask_install "Fonts" "JetBrainsMono"; then
     echo "[*] Font installation..."
@@ -37,8 +41,10 @@ echo "[*] generating set_env.bat..."
 cat <<EOF > set_env.bat
 @echo off
 set "ROOT=%CD%"
-set "PATH=%ROOT%\bin\git\bin;%ROOT%\bin\git\usr\bin;%ROOT%\bin\jdk21\bin;%ROOT%\bin\python;%ROOT%\bin\vscode\bin;%ROOT%\bin\busybox;%PATH%"
+set "PATH=%ROOT%\bin\git\bin;%ROOT%\bin\git\usr\bin;%ROOT%\bin\jdk21\bin;%ROOT%\bin\python;%ROOT%\bin\vscode\bin;%ROOT%\bin\busybox;%ROOT%\bin\make;%ROOT%\bin\bruno;%ROOT%\bin\mongodb\bin;%ROOT%\bin\mysql\bin;%ROOT%\bin\pgsql\bin;%ROOT%\bin\rust\cargo\bin;%PATH%"
 set "JAVA_HOME=%ROOT%\bin\jdk21"
+set "CARGO_HOME=%ROOT%\bin\rust\cargo"
+set "RUSTUP_HOME=%ROOT%\bin\rust\rustup"
 echo [OK] Dev env loaded
 EOF
 
