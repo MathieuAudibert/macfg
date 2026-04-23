@@ -12,7 +12,7 @@
 
 	<groupId>mpp.macfg</groupId>
 	<artifactId>maconfig</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1.0-SNAPSHOT</version>
 	<name>ma-configuration</name>
     <url>https://github.com/mathieu-personal-projects</url>
     <packaging>pom</packaging>
