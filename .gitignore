@@ -40,3 +40,5 @@ replay_pid*
 **/certs/*.key
 **/certs/*.crt
 **/certs/*.cer
+
+**.pem
