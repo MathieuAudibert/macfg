@@ -29,6 +29,7 @@
 	</properties>
 
     <modules>
+		<module>core</module>
         <module>config</module>
     </modules>
 

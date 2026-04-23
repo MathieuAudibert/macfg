@@ -10,7 +10,7 @@ class ConfigApplication
 fun main(args: Array<String>) {
 	val logger = KotlinLogging.logger {}
 
-	logger.trace { "Starting Kotlin Springboot application" }
+	logger.trace { "Starting Kotlin Springboot application - Config" }
 	runApplication<ConfigApplication>(*args)
 	
 	val banner = ConfigApplication::class.java.getResource("/static/banner.txt")?.readText() ?: ""
