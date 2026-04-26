@@ -22,5 +22,5 @@ jobs:
 
       - name: Build and push
         run: |
-          docker build -t ghcr.io/mathieuaudibert/macfg:latest .
-          docker push ghcr.io/mathieuaudibert/macfg:latest
+          docker build -t ghcr.io/${{ github.repository }}:latest .
+          docker push ghcr.io/${{ github.repository }}:latest
