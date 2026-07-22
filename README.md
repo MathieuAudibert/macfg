@@ -2,7 +2,7 @@
 
 This project is just a CLI application to setup my dev environement.
 
-Made w/ Kotlin.
+Made w/ Java Springboot/Springshell.
 
 ## More on this
 

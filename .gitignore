@@ -42,3 +42,5 @@ replay_pid*
 **/certs/*.cer
 
 .macfg-history
+
+.vscode
